@@ -41,10 +41,5 @@ class GameServerMetrics(commands.Cog):
         if not self.update_status_task:
             self.update_status_task = self.bot.loop.create_task(self.update_status())
 
-    @commands.command()
-    async def mycom(self, ctx):
-        """This does stuff!"""
-        await ctx.send("I can do stuff!")
-
 async def setup(bot: Red):
     await bot.add_cog(MyCog(bot))
